@@ -139,10 +139,10 @@ const ContactUsForm = () => {
         <h3 className="text-xl font-semibold text-gray-800 mb-4">Our Location</h3>
         <div className="flex items-center mb-4">
           <i className="fas fa-map-marker-alt text-2xl text-blue-500 mr-3"></i>
-          <div>
+          {/* <div>
             <h4 className="text-lg font-semibold text-gray-800">N. K ENTERPRISES</h4>
             <p className="text-gray-600">Jodhpur Road, Pipar City, Dist. Jodhpur, 342601</p>
-          </div>
+          </div> */}
         </div>
         <div className="w-full aspect-w-16 aspect-h-9">
           <iframe

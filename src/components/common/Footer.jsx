@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
               <div className="w-full lg:w-4/12 px-4">
                 <span className="block uppercase text-blue-500 text-sm font-semibold mb-2">About Us</span>
-                <ul className="list-unstyled">
+                {/* <ul className="list-unstyled">
                   <li>
                     <a href="#" className="text-blue-600 hover:text-blue-800 font-semibold block pb-2 text-sm">N. K ENTERPRISES Jodhpur Road Pipar City Dist.Jodhpur 342601</a>
                   </li>
@@ -54,7 +54,7 @@ const Footer = () => {
                     <a href="#" className="text-blue-600 hover:text-blue-800 font-semibold block pb-2 text-sm">9166869829</a>
                   </li>
                 
-                </ul>
+                </ul> */}
               </div>
             </div>
           </div>
