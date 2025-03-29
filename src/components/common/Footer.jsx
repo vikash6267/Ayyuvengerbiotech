@@ -67,7 +67,7 @@ const Footer = () => {
 
 <div className=''>
 Powered By -
-<a href="https://mahi-technocrafts.vercel.app/" className="text-blue-500 hover:text-gray-800" target="_blank" rel="noopener noreferrer"> I-NEXT-ETS</a>
+<a href="https://inextets.in" className="text-blue-500 hover:text-gray-800" target="_blank" rel="noopener noreferrer"> I-NEXT-ETS</a>
 </div>
             </div>
           </div>

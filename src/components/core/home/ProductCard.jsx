@@ -23,11 +23,11 @@ function ProductCard({ products }) {
       data-aos="zoom-in"
     >
       <Link to={`/product/${_id}`} className="w-full">
-        <div className="relative w-full h-[250px] overflow-hidden bg-gray-100">
+        <div className="relative w-full h-[300px] overflow-hidden bg-gray-100">
           <img
             src={images[0]?.url}
             alt={title}
-            className="w-full h-full object-cover transition duration-700 ease-in-out transform hover:scale-110"
+            className="w-full min-h-[300px] object-cover transition duration-700 ease-in-out transform hover:scale-110"
           />
           <img
             src={images[1]?.url}

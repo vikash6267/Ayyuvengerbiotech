@@ -20,11 +20,11 @@ function TestSlide({ products }) {
           <Link
             to={`/product/${product._id}`}
             key={product._id}
-            className="min-w-[220px] max-w-[220px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 flex-shrink-0"
+            className="min-w-[220px]  max-w-[220px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 flex-shrink-0"
             data-aos="fade-up"
           >
             {/* Image Container */}
-            <div className="relative w-full h-[180px] bg-gray-100">
+            <div className="relative w-full h-[290px] bg-gray-100">
               <img
                 src={product?.images[0]?.url}
                 alt={product?.title}

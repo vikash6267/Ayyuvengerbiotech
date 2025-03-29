@@ -35,11 +35,11 @@ function AllProduct() {
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
             >
               {/* Product Image */}
-              <div className="relative w-full h-48 bg-gray-100">
+              <div className="relative w-full h-[380px] bg-gray-100">
                 <img
                   src={product.images[0]?.url}
                   alt={product.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-[90%] object- transition-transform duration-300 hover:scale-110"
                 />
                 <img
                   src={product.images[1]?.url}
