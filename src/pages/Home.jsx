@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import ProductCard from "../components/core/home/ProductCard";
 import Footer from "../components/common/Footer";
 import OffersSection from "../components/common/HealthCare";
+import HeroSection from "../components/common/HeroSection";
 
 function Home() {
   const [products, setProduct] = useState([]);
@@ -55,11 +56,11 @@ function Home() {
         {/* Hero Image */}
         <div>
           <div>
-            <img
+            {/* <img
               src="https://png.pngtree.com/png-clipart/20230519/original/pngtree-vegetables-and-fruits-health-products-medical-industry-web-banner-png-image_9164845.png"
               alt="Banner"
               className="w-screen h-screen object-cover"
-            />
+            /> */}
 
             {/* <img
             src={'https://png.pngtree.com/png-clipart/20230519/original/pngtree-vegetables-and-fruits-health-products-medical-industry-web-banner-png-image_9164845.png'}
@@ -67,6 +68,7 @@ function Home() {
             className="lg:hidden sm:hidden md:hidden  "
           /> */}
           </div>
+<HeroSection />
 <OffersSection />
           <div>
             <div className=" flex items-center justify-between w-11/12 mx-auto mt-[10px] ">
@@ -89,7 +91,7 @@ function Home() {
 
         <div className=" my-[40px] flex justify-center ">
           <img
-            src="https://www.creativehatti.com/wp-content/uploads/edd/2023/02/Banner-of-medical-healthcare-solutions-template-20-large.jpg"
+            src="/banner.png"
             alt=""
             className=" max-h-[80vh]"
           />

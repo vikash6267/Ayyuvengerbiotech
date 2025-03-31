@@ -30,13 +30,13 @@ const Footer = () => {
                 <span className="block uppercase text-green-500 text-sm font-semibold mb-2">Useful Links</span>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="https://home-decore.vercel.app/profile" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">My Profile</a>
+                    <a href="https://ayuvengerbiotech.com/profile" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">My Profile</a>
                   </li>
                   <li>
-                    <a href="https://home-decore.vercel.app/order" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">My Order</a>
+                    <a href="https://ayuvengerbiotech.com/order" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">My Order</a>
                   </li>
                   <li>
-                    <a href="https://home-decore.vercel.app/contact" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">Contact Us</a>
+                    <a href="https://ayuvengerbiotech.com/contact" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">Contact Us</a>
                   </li>
                   <li>
                     <Link to="/admin/dashboard/add-product" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">Admin Route</Link>
