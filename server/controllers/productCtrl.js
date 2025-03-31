@@ -66,20 +66,21 @@ const imagesArray = JSON.parse(req.body.images);
 };
 
 
-exports.getAllProduct = async (req, res)=>{
-    try {
-        const allProduct = await Product.find()
-        res.status(200).json({
+exports.getAllProduct = async (req, res) => {
+  try {
+      const allProduct = await Product.find().populate('category', 'name'); // Sirf category ka name populate hoga
+      res.status(200).json({
           success: true,
           data: allProduct,
-        })
-      } catch (error) {
-        return res.status(500).json({
+      });
+  } catch (error) {
+      return res.status(500).json({
           success: false,
           message: error.message,
-        })
-      }
-}
+      });
+  }
+};
+
 
 
 exports.getProductDetails = async(req, res) =>{

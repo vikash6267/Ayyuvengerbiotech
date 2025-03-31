@@ -14,8 +14,8 @@ function TestSlide({ products }) {
     .slice(0, 5);
 
   return (
-    <div className="w-full mt-8 overflow-x-auto scrollbar-hide">
-      <div className="flex gap-6 px-4 md:px-8">
+    <div className="w-11/12 mx-auto mt-8 overflow-x-auto scrollbar-hide">
+      <div className="flex gap-6 justify-evenly px-4 md:px-8">
         {displayedProducts.map((product) => (
           <Link
             to={`/product/${product._id}`}
