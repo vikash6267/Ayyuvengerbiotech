@@ -42,7 +42,7 @@ function AddProduct() {
     category: Yup.string().required("Category is required"),
     highPrice: Yup.number().required("High Price is required"),
     quantity: Yup.number().required("Quantity is required"),
-    sizes: Yup.string().required("Sizes are required"),
+
   });
 
   const formik = useFormik({
@@ -69,7 +69,7 @@ function AddProduct() {
     <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
       <h2 className="text-2xl font-bold text-center mb-6">Add Product</h2>
       <form onSubmit={formik.handleSubmit} className="space-y-4">
-        {['title', 'description', 'price', 'highPrice', 'quantity', 'sizes'].map((field) => (
+        {['title', 'description', 'price', 'highPrice', 'quantity',].map((field) => (
           <div key={field}>
             <label className="block font-medium capitalize" htmlFor={field}>{field.replace(/([A-Z])/g, ' $1')}</label>
             <input

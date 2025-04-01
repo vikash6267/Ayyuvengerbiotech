@@ -18,7 +18,7 @@ const imagesArray = JSON.parse(req.body.images);
       !description ||
       !price ||
       !category ||
-      !sizes ||
+    
       !quantity ||
       !imagesArray
     ) {
@@ -45,7 +45,7 @@ const imagesArray = JSON.parse(req.body.images);
       price,
       category: categoryDetails._id,
       highPrice,
-      sizes,
+      sizes:"N/A",
       quantity,
       images:imagesArray,
     });
