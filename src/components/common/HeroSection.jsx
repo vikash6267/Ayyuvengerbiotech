@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -13,7 +14,10 @@ const HeroSection = () => {
             Discover a wide range of health care products that ensure your well-being.
           </p>
           <button className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition">
+           
+            <Link to={"/allProduct"}>
             Shop Now
+            </Link>
           </button>
         </div>
 

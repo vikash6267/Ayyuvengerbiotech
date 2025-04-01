@@ -8,6 +8,7 @@ import ProductCard from "../components/core/home/ProductCard";
 import Footer from "../components/common/Footer";
 import OffersSection from "../components/common/HealthCare";
 import HeroSection from "../components/common/HeroSection";
+import HealthcareOffers from "../components/common/OfferHealthCare";
 
 function Home() {
   const [products, setProduct] = useState([]);
@@ -36,10 +37,11 @@ function Home() {
 
   useEffect(() => {
     // fetchSubLinks();
+    console.log(allProduct)
     setProduct(allProduct);
-    selectedProducts = selectRandomProducts(products);
-    console.log(selectedProducts);
-    setProduct2(selectedProducts);
+    const data  = selectRandomProducts(products);
+    console.log(data);
+    setProduct2(data);
   }, [allProduct]);
 
   if (allProduct.length === 0) {
@@ -88,6 +90,7 @@ function Home() {
             {products && <TestSlide products={products} />}
           </div>
         </div>
+        <HealthcareOffers />
 
         <div className=" my-[40px] flex justify-center ">
           <img

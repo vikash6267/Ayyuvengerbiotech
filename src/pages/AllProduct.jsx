@@ -19,7 +19,7 @@ function AllProduct() {
   }, []);
 
   useEffect(() => {
-    let filtered = allProduct;
+    let filtered = [...allProduct]; // Create a shallow copy of the allProduct array
     if (category) {
       filtered = filtered.filter(product => product.category.name === category);
     }
@@ -29,17 +29,17 @@ function AllProduct() {
       );
     }
     if (sortType === 'low-high') {
-      filtered.sort((a, b) => a.price - b.price);
+      filtered = [...filtered].sort((a, b) => a.price - b.price); // Create a new copy before sorting
     } else if (sortType === 'high-low') {
-      filtered.sort((a, b) => b.price - a.price);
+      filtered = [...filtered].sort((a, b) => b.price - a.price);
     } else if (sortType === 'a-z') {
-      filtered.sort((a, b) => a.title.localeCompare(b.title));
+      filtered = [...filtered].sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortType === 'z-a') {
-      filtered.sort((a, b) => b.title.localeCompare(a.title));
+      filtered = [...filtered].sort((a, b) => b.title.localeCompare(a.title));
     }
     setFilteredProducts(filtered);
   }, [category, sortType, searchTerm, allProduct]);
-
+  
   return (
     <div className="min-h-screen mt-20 px-4 md:px-6 lg:px-10">
       <h2 className="text-center text-2xl font-bold text-gray-800 mb-6">All Products</h2>

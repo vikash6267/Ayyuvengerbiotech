@@ -4,60 +4,66 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="relative bg-green-200 pt-8 pb-6 mt-[100px]">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap text-left lg:text-left">
-          <div className="w-full lg:w-6/12 px-4">
-            <h4 className="text-3xl font-semibold text-green-700">AYUVENGER BIOTECH</h4>
-            <h5 className="text-lg mt-0 mb-2 text-green-600">
-              Delivery within 4-7 working days.
-            </h5>
-            <div className="mt-6 lg:mb-0 mb-6 flex">
-              <button className="bg-white text-green-600 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2" type="button">
+    <footer className="bg-green-800 text-white pt-10 pb-8 mt-[100px] relative">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-wrap justify-between items-start">
+          {/* Left Section - Branding & Social Icons */}
+          <div className="w-full lg:w-5/12 px-4 mb-8 lg:mb-0">
+            <h4 className="text-4xl font-semibold text-white mb-2">AYUVENGER BIOTECH</h4>
+            <h5 className="text-lg text-green-200 mb-4">Delivery within 4-7 working days. Your health, our priority!</h5>
+            <div className="flex gap-4">
+              <button className="bg-green-600 hover:bg-green-500 text-white p-3 rounded-full transition duration-300 transform hover:scale-110">
                 <FaFacebookF />
               </button>
-              <button className="bg-white text-green-400 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2" type="button">
+              <button className="bg-green-500 hover:bg-green-400 text-white p-3 rounded-full transition duration-300 transform hover:scale-110">
                 <FaWhatsapp />
               </button>
-              <button className="bg-white text-green-800 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2" type="button">
+              <button className="bg-green-700 hover:bg-green-600 text-white p-3 rounded-full transition duration-300 transform hover:scale-110">
                 <FaInstagram />
               </button>
             </div>
           </div>
-          <div className="w-full lg:w-6/12 px-4">
-            <div className="flex flex-wrap items-top mb-6">
-              <div className="w-full lg:w-4/12 px-4 ml-auto justify-center flex flex-col ">
-                <span className="block uppercase text-green-500 text-sm font-semibold mb-2">Useful Links</span>
-                <ul className="list-unstyled">
+
+          {/* Right Section - Useful Links */}
+          <div className="w-full lg:w-5/12 px-4">
+            <div className="flex flex-wrap">
+              <div className="w-full lg:w-5/12 px-4 mb-6">
+                <span className="block uppercase text-green-400 text-sm font-semibold mb-3">Useful Links</span>
+                <ul className="space-y-2">
                   <li>
-                    <a href="https://ayuvengerbiotech.com/profile" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">My Profile</a>
+                    <a href="https://ayuvengerbiotech.com/profile" className="text-green-200 hover:text-green-100 font-medium block text-sm">My Profile</a>
                   </li>
                   <li>
-                    <a href="https://ayuvengerbiotech.com/order" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">My Order</a>
+                    <a href="https://ayuvengerbiotech.com/order" className="text-green-200 hover:text-green-100 font-medium block text-sm">My Order</a>
                   </li>
                   <li>
-                    <a href="https://ayuvengerbiotech.com/contact" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">Contact Us</a>
+                    <a href="https://ayuvengerbiotech.com/contact" className="text-green-200 hover:text-green-100 font-medium block text-sm">Contact Us</a>
                   </li>
                   <li>
-                    <Link to="/admin/dashboard/add-product" className="text-green-600 hover:text-green-800 font-semibold block pb-2 text-sm">Admin Route</Link>
+                    <Link to="/admin/dashboard/add-product" className="text-green-200 hover:text-green-100 font-medium block text-sm">Admin Route</Link>
                   </li>
                 </ul>
               </div>
-              <div className="w-full lg:w-4/12 px-4">
-                <span className="block uppercase text-green-500 text-sm font-semibold mb-2">About Us</span>
+
+              {/* Empty section for spacing */}
+              <div className="w-full lg:w-7/12 px-4">
+                <span className="block uppercase text-green-400 text-sm font-semibold mb-3">About Us</span>
+                {/* Add your About Us links or content here */}
               </div>
             </div>
           </div>
         </div>
-        <hr className="my-6 border-green-300" />
-        <div className="flex flex-wrap items-center md:justify-between justify-center">
-          <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div className="text-sm text-green-500 font-semibold py-1 flex gap-2">
-              Copyright © <span id="get-current-year">2021</span>
-              <div className=''>
-                Powered By -
-                <a href="https://inextets.in" className="text-green-500 hover:text-gray-800" target="_blank" rel="noopener noreferrer"> I-NEXT-ETS</a>
-              </div>
+
+        {/* Divider */}
+        <hr className="my-6 border-green-700" />
+
+        {/* Footer Bottom Section */}
+        <div className="flex flex-wrap justify-center items-center text-center">
+          <div className="w-full md:w-4/12 px-4 mx-auto">
+            <div className="text-sm text-green-300 font-semibold py-2 flex justify-center items-center gap-2">
+              <span>© <span id="get-current-year">{new Date().getFullYear()}</span></span>
+              <span>Powered By</span>
+              <a href="https://inextets.in" className="text-green-300 hover:text-green-500" target="_blank" rel="noopener noreferrer">I-NEXT-ETS</a>
             </div>
           </div>
         </div>
