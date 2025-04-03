@@ -73,7 +73,7 @@ function Orders() {
             {allOrders.map((order) => (
               <tr key={order._id}>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                  {order.order_id}
+                ORD-{order._id.slice(-5)}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   {order.user.name} ({order.user.email})

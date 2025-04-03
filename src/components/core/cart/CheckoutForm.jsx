@@ -205,7 +205,7 @@ const handleCoupon = async() =>{
 <div className=' flex w-full justify-between px-6 font-bold text-[12px] mt-3'>Payable  <span> {displayMoney(payable)}</span></div>
 
 
-<div className='mt-3 px-6 flex flex-col gap-2'>
+{ false && <div className='mt-3 px-6 flex flex-col gap-2'>
   {/* <label htmlFor="coupon">Apply Coupon</label> */}
   <div className='flex gap-5 relative '>
     <div className="input-container ">
@@ -226,7 +226,7 @@ const handleCoupon = async() =>{
         )}
     <button type='submit' className='button' onClick={handleCoupon}>Apply</button>
   </div>
-</div>
+</div>}
 
     </div>
 

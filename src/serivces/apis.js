@@ -15,6 +15,7 @@ export const userEndpoints = {
 export const productEndpoints = {
     GET_ALL_PRODUCT_API: BASE_URL + "/product/all-product",
      GET_PRODUCT_DETAILS : BASE_URL + "/product/getProductDetails",
+     UPDATE_PRODUCT_DETAILS : BASE_URL + "/product/update",
 
 
       //COUPON APIS 
@@ -46,7 +47,7 @@ export const productEndpoints = {
 
   export const adminEndPoints = {
     ADD_PRODUCT_API : BASE_URL + "/product/create",
-    EDIT_PRODUCT_API : BASE_URL + "/product/create",
+    EDIT_PRODUCT_API : BASE_URL + "/product/update",
     DELETE_PRODUCT_API : BASE_URL + "/product/delete",
 
 

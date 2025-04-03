@@ -137,3 +137,48 @@ exports.deleteProduct = async (req, res) => {
 };
 
 
+exports.updateProduct = async (req, res) => {
+  try {
+    console.log(req.body)
+    const updatedData = req.body;
+    const  productID  = updatedData.id;
+    validateMongoDbId(productID); // Validate MongoDB ID
+
+
+    // अगर `title` मौजूद है तो slug को भी अपडेट करें
+    if (updatedData.title) {
+      updatedData.slug = slugify(updatedData.title);
+    }
+
+    // अगर images JSON string में हैं, तो इसे पार्स करें
+    if (updatedData.images) {
+      updatedData.images = JSON.parse(updatedData.images);
+    }
+
+    // Update the product
+    const updatedProduct = await Product.findByIdAndUpdate(productID, updatedData, {
+      new: true, // Updated product return होगा
+      runValidators: true, // Validation rules लागू होंगी
+    });
+
+    if (!updatedProduct) {
+      return res.status(404).json({
+        success: false,
+        message: "Product not found",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      data: updatedProduct,
+      message: "Product updated successfully",
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to update product",
+      error: error.message,
+    });
+  }
+};

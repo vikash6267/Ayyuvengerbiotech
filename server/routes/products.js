@@ -15,7 +15,8 @@ const {
   createProduct,
   getAllProduct,
   getProductDetails,
-  deleteProduct
+  deleteProduct,
+  updateProduct
 } = require("../controllers/productCtrl");
 
 
@@ -33,6 +34,7 @@ router.post("/create",auth,isAdmin, createProduct);
 router.post("/delete",auth,isAdmin, deleteProduct);
 router.post("/getProductDetails", getProductDetails);
 router.get("/all-product", getAllProduct);
+router.put("/update/:productID", updateProduct);
 
 
 //admin

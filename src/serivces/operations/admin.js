@@ -10,6 +10,7 @@ const {
     ADD_PRODUCT_API,
     EDIT_PRODUCT_API,
     DELETE_PRODUCT_API,
+    UPDATE_PRODUCT_DETAILS,
 
     ADD_CATEGORY_API,
     EDIT_CATEGORY_API,
@@ -49,11 +50,11 @@ export const createProduct = async (data, token) => {
 
 
 
-  export const editProduct = async (data, token) => {
+  export const updateProduct = async (data, token) => {
    
     const toastId = toast.loading("Loading...")
     try {
-      const response = await apiConnector("POST", EDIT_PRODUCT_API, data, {
+      const response = await apiConnector("PUT", `${EDIT_PRODUCT_API}/${data?.id}`, data, {
         "Content-Type": "multipart/form-data",
         Authorization: `Bearer ${token}`,
       })
@@ -61,7 +62,7 @@ export const createProduct = async (data, token) => {
       if (!response?.data?.success) {
         throw new Error("Could Not Update Course Details")
       }
-      toast.success("Course Details Updated Successfully")
+      toast.success(" Details Updated Successfully")
     
     } catch (error) {
       console.log("EDIT COURSE API ERROR............", error)
@@ -115,6 +116,30 @@ export const createProduct = async (data, token) => {
     return result
    
   }
+
+  // export const updateProduct = async (data, token) => {
+  //   let result =[]
+  //   const toastId = toast.loading("Loading...")
+  //   try {
+  //       const response = await apiConnector("POST", ADD_CATEGORY_API, data, {
+  //         "Content-Type": "multipart/form-data",
+  //         Authorization: `Bearer ${token}`,
+  //       })
+  //     console.log("CREATE PRODUCT API RESPONSE............", response)
+  //     if (!response?.data?.success) {
+  //       throw new Error("Could Not Add PRODUCT Details")
+  //     }
+  //     result = response?.data?.CategorysDetails
+  //     toast.success("PRODUCT Details Added Successfully")
+   
+  //   } catch (error) {
+  //     console.log("CREATE PRODUCT API ERROR............", error)
+  //     toast.error(error.message)
+  //   }
+  //   toast.dismiss(toastId)
+  //   return result
+   
+  // }
 
   export const deleteCategory = async (data, token) => {
 

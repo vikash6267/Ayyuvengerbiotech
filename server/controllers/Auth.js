@@ -81,10 +81,10 @@ exports.signup = async (req, res) => {
       contactNumber,
     } = req.body;
 
-  
+  console.log(req.body)
 
     // Check if All Details are there or not
-    if (!name || !email || !password || !contactNumber) {
+    if (!name || !email || !password ) {
       return res.status(403).send({
         success: false,
         message: "All Fields are required",
