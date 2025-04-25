@@ -1,6 +1,6 @@
 
 import { HiUserAdd } from "react-icons/hi";
-import { IoLibrary } from "react-icons/io5";
+import { IoHome, IoLibrary } from "react-icons/io5";
 import { GiNotebook } from "react-icons/gi";
 import { RiLogoutBoxLine } from "react-icons/ri";
 import { FaHistory } from "react-icons/fa";
@@ -23,6 +23,12 @@ export const sidebarLinks = [
   // },
   {
     id: 1,
+    name: "Website Home",
+    path: "/",
+    icon: <IoHome />  ,
+  },
+  {
+    id: 10,
     name: "Add Product",
     path: "/admin/dashboard/add-product",
     icon: <IoMdAddCircleOutline />  ,

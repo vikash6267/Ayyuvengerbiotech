@@ -1,6 +1,6 @@
 import "./App.css";
 // Library
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 // Secuirty
@@ -37,6 +37,8 @@ import AboutUs from "./pages/About";
 function App() {
   const { checkout } = useSelector((state) => state.payment);
   const { user } = useSelector((state) => state.profile);
+  const location = useLocation(); // 👈
+  const isAdminRoute = location.pathname.startsWith("/admin");
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -44,7 +46,7 @@ function App() {
   }, []);
   return (
     <div className="min-w-screen min-h-screen flex flex-col font-montserrat">
-      <Header />
+       {!isAdminRoute && <Header />}
 
       <Routes>
         <Route path="/" element={<Home />} />
