@@ -96,23 +96,29 @@ function AddProduct({ productData = null, closeModal = () => {} }) {
       <h2 className="text-2xl font-bold text-center mb-6">{isEditing ? "Edit Product" : "Add Product"}</h2>
       <form onSubmit={formik.handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {["title", "description", "price", "highPrice", "quantity"].map((field) => (
-            <div key={field} className={field === "description" ? "md:col-span-2" : ""}>
-              <label className="block font-medium capitalize mb-1" htmlFor={field}>
-                {field.replace(/([A-Z])/g, " $1")}
-              </label>
-              <input
-                id={field}
-                name={field}
-                type={field === "price" || field === "highPrice" || field === "quantity" ? "number" : "text"}
-                className="w-full p-2 border rounded-md focus:ring focus:ring-blue-200 focus:border-blue-400 transition"
-                {...formik.getFieldProps(field)}
-              />
-              {formik.touched[field] && formik.errors[field] && (
-                <div className="text-red-500 text-sm mt-1">{formik.errors[field]}</div>
-              )}
-            </div>
-          ))}
+        {["title", "description", "price", "highPrice", "quantity"].map((field) => (
+  <div key={field} className={field === "description" ? "md:col-span-2" : ""}>
+    <label className="block font-medium capitalize mb-1" htmlFor={field}>
+      {{
+        title: "Product Name",
+        description: "Product Details",
+        price: "Actual Price",
+        highPrice: "MRP",
+        quantity: "Quantity",
+      }[field]}
+    </label>
+    <input
+      id={field}
+      name={field}
+      type={field === "price" || field === "highPrice" || field === "quantity" ? "number" : "text"}
+      className="w-full p-2 border rounded-md focus:ring focus:ring-blue-200 focus:border-blue-400 transition"
+      {...formik.getFieldProps(field)}
+    />
+    {formik.touched[field] && formik.errors[field] && (
+      <div className="text-red-500 text-sm mt-1">{formik.errors[field]}</div>
+    )}
+  </div>
+))}
 
           <div>
             <label className="block font-medium mb-1">Category</label>

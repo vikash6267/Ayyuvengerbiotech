@@ -100,7 +100,7 @@ function Navbar({ isOpen, setIsOpen }) {
                 <div className="flex flex-col items-center">
                   {user?.image ? (
                     <img
-                      src={user.image || "/placeholder.svg"}
+                      src={"/apple-touch-icon.png"}
                       alt={user.name || "User"}
                       className="w-16 h-16 rounded-full border-2 border-blue-100 object-cover"
                       data-aos="fade-up"
