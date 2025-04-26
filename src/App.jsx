@@ -33,6 +33,9 @@ import { getAllProduct } from "./serivces/operations/product";
 import { useEffect } from "react";
 import { setCheckout } from "./redux/slices/paymentSlice";
 import AboutUs from "./pages/About";
+import MobileMenu from "./components/common/MobileMenu";
+import TopBar from "./components/TopBar";
+import EnhancedSocialSidebar from "./components/EnhancedSocial";
 
 function App() {
   const { checkout } = useSelector((state) => state.payment);
@@ -47,6 +50,7 @@ function App() {
   return (
     <div className="min-w-screen min-h-screen flex flex-col font-montserrat">
        {!isAdminRoute && <Header />}
+       {!isAdminRoute && <TopBar />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -146,6 +150,12 @@ function App() {
         </PrivateRoute>
       )}
 
+
+
+<div className="fixed bottom-0 z-40">
+        <MobileMenu />
+      </div>
+        <EnhancedSocialSidebar />
       {/* Admin Routes */}
     </div>
   );

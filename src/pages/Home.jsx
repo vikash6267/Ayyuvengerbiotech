@@ -10,6 +10,7 @@ import HeroSection from "../components/common/HeroSection";
 import HealthcareOffers from "../components/common/OfferHealthCare";
 import TestSlide from "../components/core/home/Slider";
 import { FaStar } from "react-icons/fa";
+import EnquiryForm from "../components/EnquiryForm";
 
 
 
@@ -160,7 +161,7 @@ function Home() {
         <HeroSection />
 
         {/* Offers Section */}
-        <OffersSection />
+        <EnquiryForm />
 
         {/* New Products Section */}
         <div className="py-12 bg-white">
@@ -251,6 +252,7 @@ function Home() {
             </div>
           </div>
         </div>
+        <OffersSection />
 
         {/* Trust Badges Section */}
         <div className="py-12 bg-gray-50">
