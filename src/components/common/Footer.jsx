@@ -48,10 +48,17 @@ const Footer = () => {
             </div>
 
             <div className="space-y-3">
-              <div className="flex items-center text-green-200 hover:text-white transition-colors duration-200">
-                <FaMapMarkerAlt className="mr-3 text-green-400" />
-                <span className="text-sm">123 Ayurveda Street, Wellness City</span>
-              </div>
+            <div className="flex items-center text-green-200 hover:text-white transition-colors duration-200">
+  <FaMapMarkerAlt className="mr-3 text-green-400" />
+  <span className="text-sm">
+    Mfg - ARVIND MEGA PARK,<br />
+    PLOT NO C 21/9<br />
+    VASNA- CHACHARVADI,<br />
+    AHMEDABAD 382213.<br />
+    Corporate office - Transport Nagar Kanpur U.P.
+  </span>
+</div>
+
               <div className="flex items-center text-green-200 hover:text-white transition-colors duration-200">
                 <FaPhoneAlt className="mr-3 text-green-400" />
                 <span className="text-sm">+91 9452067415</span>
