@@ -61,7 +61,7 @@ const Footer = () => {
 
               <div className="flex items-center text-green-200 hover:text-white transition-colors duration-200">
                 <FaPhoneAlt className="mr-3 text-green-400" />
-                <span className="text-sm">+91 9452067415</span>
+                <span className="text-sm">+91 8299714967</span>
               </div>
               <div className="flex items-center text-green-200 hover:text-white transition-colors duration-200">
                 <FaEnvelope className="mr-3 text-green-400" />
