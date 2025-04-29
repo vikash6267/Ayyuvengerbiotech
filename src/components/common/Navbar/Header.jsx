@@ -50,7 +50,7 @@ function Header() {
             <div className="flex items-center space-x-4 text-sm">
               <a href="tel:+919876543210" className="flex items-center hover:text-teal-100 transition-colors">
                 <FaPhone className="h-3 w-3 mr-1" />
-                <span className="hidden sm:inline">+91 9876 543 210</span>
+                <span className="hidden sm:inline">+91 8299714967</span>
               </a>
               <a href="mailto:info@medicare.com" className="flex items-center hover:text-teal-100 transition-colors">
                 <FaEnvelope className="h-3 w-3 mr-1" />
